@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/linuxwale-nextjs' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/linuxwale-nextjs/' : '',
+  trailingSlash: true,
   // ...other config options
 };
 
