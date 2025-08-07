@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WelcomeTerminal from "@/components/WelcomeTerminal";
+import WelcomeRedirect from "@/components/WelcomeRedirect";
 import ClientScripts from "@/components/ClientScripts";
+import ConditionalLayout from "@/components/ConditionalLayout";
 
 export const metadata: Metadata = {
   title: "LinuxWale - Home",
@@ -18,10 +19,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <WelcomeTerminal />
-        <Navbar />
-        {children}
-        <Footer />
+        <WelcomeRedirect />
+        <ConditionalLayout>
+          <>
+            <Navbar />
+            {children}
+            <Footer />
+          </>
+        </ConditionalLayout>
         <ClientScripts />
       </body>
     </html>
