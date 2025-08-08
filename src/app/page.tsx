@@ -15,6 +15,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Green Line Separator */}
+      <div className="hero-separator"></div>
+
       {/* Main Content Sections - Discord Style Layout */}
       <main className="main-sections">
         {/* Section 1: Title Left, Content Right */}
