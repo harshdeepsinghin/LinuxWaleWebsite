@@ -9,11 +9,10 @@ export default function WelcomeTerminal() {
   const [input, setInput] = useState('');
   const [currentStep, setCurrentStep] = useState(1);
   const [output, setOutput] = useState([
-    'Welcome to LinuxWale Terminal v1.0',
-    'Initializing Linux community portal...',
-    'Connection established. Ready for commands.',
+    'Welcome to LinuxWale',
+    'Want to type your 1st Linux command?',
     '',
-    'Type "echo namaste world" to continue:'
+    'Type "echo hello world" to continue:'
   ]);
   const inputRef = useRef<HTMLInputElement>(null);
   const outputRef = useRef<HTMLDivElement>(null);
@@ -35,11 +34,74 @@ export default function WelcomeTerminal() {
   };
 
   useEffect(() => {
+    // Prevent scrolling on welcome page
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    document.body.style.height = '100vh';
+
     // Focus input after a short delay
     setTimeout(() => {
       inputRef.current?.focus();
+      
+      // For mobile devices, try to trigger keyboard
+      if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        inputRef.current?.click();
+        // Additional attempts to open keyboard
+        setTimeout(() => {
+          inputRef.current?.focus();
+          inputRef.current?.click();
+        }, 200);
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 500);
+      }
     }, 100);
-  }, []);
+
+    // Global keydown listener for desktop
+    const handleGlobalKeydown = (e: KeyboardEvent) => {
+      // Only handle if input is not already focused and it's a printable character
+      if (document.activeElement !== inputRef.current && 
+          !e.ctrlKey && !e.altKey && !e.metaKey && 
+          e.key.length === 1) {
+        
+        // Focus the input and add the character
+        inputRef.current?.focus();
+        
+        // Add the character to input
+        if (e.key !== ' ' || input.length > 0) { // Allow space only if not first character
+          setInput(prev => prev + e.key);
+        }
+        
+        e.preventDefault();
+      }
+      
+      // Handle special keys
+      if (document.activeElement !== inputRef.current) {
+        if (e.key === 'Backspace') {
+          inputRef.current?.focus();
+          setInput(prev => prev.slice(0, -1));
+          e.preventDefault();
+        } else if (e.key === 'Enter') {
+          inputRef.current?.focus();
+          processCommand();
+          e.preventDefault();
+        }
+      }
+    };
+
+    // Add global keydown listener
+    document.addEventListener('keydown', handleGlobalKeydown);
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
+      document.removeEventListener('keydown', handleGlobalKeydown);
+    };
+  }, [input]); // Add input as dependency
 
   // Auto-scroll whenever output changes
   useEffect(() => {
@@ -109,9 +171,18 @@ export default function WelcomeTerminal() {
 
   return (
     <div className="terminal-container">
-      {/* Logo Image */}
+      {/* Logo */}
       <div className="welcome-logo">
-        <img src="/images/LW_W_on_B.webp" alt="LinuxWale Logo" className="logo-image" style={{ width: '100px', height: '100px' }} />
+        <img
+          src="/images/LW_W_on_B.webp"
+          alt="LinuxWale Logo"
+          className="logo-image"
+          style={{
+            width: '80px',
+            height: '80px',
+
+          }}
+        />
       </div>
       <div className="terminal-window">
         <div className="terminal-header">
@@ -145,6 +216,9 @@ export default function WelcomeTerminal() {
               onKeyDown={handleKeyDown}
               autoComplete="off"
               spellCheck={false}
+              autoFocus
+              inputMode="text"
+              enterKeyHint="go"
             />
             <span className="cursor"></span>
           </div>
@@ -156,7 +230,6 @@ export default function WelcomeTerminal() {
         onClick={redirectToHomepage}
         title="Skip the terminal experience"
       >
-        <span className="skip-icon">🚀</span>
         <span className="skip-text">I'm too lazy for Linux commands!</span>
         <span className="skip-subtext">Just take me to the site →</span>
       </button>

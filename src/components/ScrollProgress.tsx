@@ -1,9 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0);
+  const pathname = usePathname();
+
+  // Don't render on welcome page
+  if (pathname === '/welcome') {
+    return null;
+  }
 
   useEffect(() => {
     const updateScrollProgress = () => {
