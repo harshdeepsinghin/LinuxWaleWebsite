@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WelcomeRedirect from "@/components/WelcomeRedirect";
 import ClientScripts from "@/components/ClientScripts";
 import ConditionalLayout from "@/components/ConditionalLayout";
+import ScrollProgress from "@/components/ScrollProgress";
 
 export const metadata: Metadata = {
   title: "LinuxWale - Home",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
       <body>
+        <ScrollProgress />
         <WelcomeRedirect />
         <ConditionalLayout>
           <>
