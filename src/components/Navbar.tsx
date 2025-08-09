@@ -38,17 +38,22 @@ export default function Navbar() {
 
         <ul className={`nav-menu ${isMenuOpen ? 'mobile-open' : ''}`}>
           <li>
-            <Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className={`nav-link ${pathname === '/about/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/services" className={`nav-link ${pathname === '/services' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/services" className={`nav-link ${pathname === '/services/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
               Services
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/contact" className={`nav-link ${pathname === '/contact/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
           </li>
