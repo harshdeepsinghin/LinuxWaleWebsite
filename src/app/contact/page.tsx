@@ -5,34 +5,34 @@ import { useState } from 'react';
 // Note: metadata is handled in layout.tsx for client components
 
 export default function Contact() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  // const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  const toggleFAQ = (index: number) => {
-    setOpenFAQ(openFAQ === index ? null : index);
-  };
+  // const toggleFAQ = (index: number) => {
+  //   setOpenFAQ(openFAQ === index ? null : index);
+  // };
 
-  const faqs = [
-    {
-      question: "How can I contribute to LinuxWale?",
-      answer: "You can contribute by sharing knowledge in our forums, creating tutorials, helping other community members, or contributing to our open-source projects on GitHub. We welcome all forms of contribution!"
-    },
-    {
-      question: "Is LinuxWale free to join?",
-      answer: "Yes! LinuxWale is completely free to join. We believe in the open-source philosophy and want to make Linux education accessible to everyone. There are no membership fees or hidden costs."
-    },
-    {
-      question: "Do you offer professional services?",
-      answer: "Yes, we offer consulting services for businesses looking to migrate to Linux or implement FOSS solutions. Our services include migration planning, infrastructure design, training programs, and ongoing support. Contact us for more details."
-    },
-    {
-      question: "What Linux distributions do you support?",
-      answer: "We support all major Linux distributions including Ubuntu, Debian, Fedora, CentOS, Arch Linux, openSUSE, and many others. Our community has expertise across the entire Linux ecosystem."
-    },
-    {
-      question: "How do I get started with Linux?",
-      answer: "Start by choosing a beginner-friendly distribution like Ubuntu or Linux Mint. You can try them in a virtual machine first, then dual-boot with your current OS. Join our community for guidance and check out our educational resources."
-    }
-  ];
+  // const faqs = [
+  //   {
+  //     question: "How can I contribute to LinuxWale?",
+  //     answer: "You can contribute by sharing knowledge in our forums, creating tutorials, helping other community members, or contributing to our open-source projects on GitHub. We welcome all forms of contribution!"
+  //   },
+  //   {
+  //     question: "Is LinuxWale free to join?",
+  //     answer: "Yes! LinuxWale is completely free to join. We believe in the open-source philosophy and want to make Linux education accessible to everyone. There are no membership fees or hidden costs."
+  //   },
+  //   {
+  //     question: "Do you offer professional services?",
+  //     answer: "Yes, we offer consulting services for businesses looking to migrate to Linux or implement FOSS solutions. Our services include migration planning, infrastructure design, training programs, and ongoing support. Contact us for more details."
+  //   },
+  //   {
+  //     question: "What Linux distributions do you support?",
+  //     answer: "We support all major Linux distributions including Ubuntu, Debian, Fedora, CentOS, Arch Linux, openSUSE, and many others. Our community has expertise across the entire Linux ecosystem."
+  //   },
+  //   {
+  //     question: "How do I get started with Linux?",
+  //     answer: "Start by choosing a beginner-friendly distribution like Ubuntu or Linux Mint. You can try them in a virtual machine first, then dual-boot with your current OS. Join our community for guidance and check out our educational resources."
+  //   }
+  // ];
 
   return (
     <>
