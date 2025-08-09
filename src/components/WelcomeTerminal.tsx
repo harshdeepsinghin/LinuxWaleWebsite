@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 
 
@@ -18,20 +18,72 @@ export default function WelcomeTerminal() {
   const outputRef = useRef<HTMLDivElement>(null);
 
 
-  const commands = {
+  const commands = useMemo(() => ({
     1: 'echo namaste world',
     2: 'cd /Home'
-  };
+  }), []);
 
-  const responses = {
+  const responses = useMemo(() => ({
     1: 'namaste world & Congrats',
     2: 'Entering LinuxWale homepage...'
-  };
+  }), []);
 
-  const promptMessages = {
+  const promptMessages = useMemo(() => ({
     1: 'Type "echo namaste world" to continue:',
     2: 'Type "cd /Home" to enter the site:'
-  };
+  }), []);
+
+  const redirectToHomepage = useCallback(() => {
+    // Mark as completed welcome
+    localStorage.setItem('linuxwale_welcome_completed', 'true');
+    localStorage.setItem('linuxwale_last_visit', Date.now().toString());
+
+    // Redirect to homepage
+    router.push('/');
+  }, [router]);
+
+  const processCommand = useCallback(() => {
+    const expectedCommand = commands[currentStep as keyof typeof commands];
+    const currentInput = input.trim();
+
+    // Clear input immediately
+    setInput('');
+
+    // Add the command to output
+    const newOutput = [...output, `user@linuxwale:~$ ${currentInput}`];
+
+    if (currentInput === expectedCommand) {
+      // Correct command
+      const response = responses[currentStep as keyof typeof responses];
+      newOutput.push(response);
+
+      if (currentStep === 1) {
+        // Move to next step
+        setOutput([...newOutput, '', promptMessages[2]]);
+        setCurrentStep(2);
+        inputRef.current?.focus();
+        if (outputRef.current) {
+          outputRef.current.scrollTop = outputRef.current.scrollHeight;
+        }
+      } else if (currentStep === 2) {
+        // Complete - redirect to homepage
+        redirectToHomepage();
+      }
+    } else {
+      // Incorrect command
+      newOutput.push('Command not found. Please try again.');
+      setOutput([...newOutput, '', promptMessages[currentStep as keyof typeof promptMessages]]);
+      inputRef.current?.focus();
+      if (outputRef.current) {
+        outputRef.current.scrollTop = outputRef.current.scrollHeight;
+      }
+    }
+
+    setOutput(newOutput);
+    if (outputRef.current) {
+      outputRef.current.scrollTop = outputRef.current.scrollHeight;
+    }
+  }, [currentStep, input, output, promptMessages, responses, commands, redirectToHomepage]);
 
   useEffect(() => {
     // Prevent scrolling on welcome page
@@ -117,57 +169,7 @@ export default function WelcomeTerminal() {
     }
   };
 
-  const processCommand = useCallback(() => {
-    const expectedCommand = commands[currentStep as keyof typeof commands];
-    const currentInput = input.trim();
 
-    // Clear input immediately
-    setInput('');
-
-    // Add the command to output
-    const newOutput = [...output, `user@linuxwale:~$ ${currentInput}`];
-
-    if (currentInput === expectedCommand) {
-      // Correct command
-      const response = responses[currentStep as keyof typeof responses];
-      newOutput.push(response);
-
-      if (currentStep === 1) {
-        // Move to next step
-        setOutput([...newOutput, '', promptMessages[2]]);
-        setCurrentStep(2);
-        inputRef.current?.focus();
-        if (outputRef.current) {
-          outputRef.current.scrollTop = outputRef.current.scrollHeight;
-        }
-      } else if (currentStep === 2) {
-        // Complete - redirect to homepage
-        redirectToHomepage();
-      }
-    } else {
-      // Incorrect command
-      newOutput.push('Command not found. Please try again.');
-      setOutput([...newOutput, '', promptMessages[currentStep as keyof typeof promptMessages]]);
-      inputRef.current?.focus();
-      if (outputRef.current) {
-        outputRef.current.scrollTop = outputRef.current.scrollHeight;
-      }
-    }
-
-    setOutput(newOutput);
-    if (outputRef.current) {
-      outputRef.current.scrollTop = outputRef.current.scrollHeight;
-    }
-  }, [currentStep, input, output, promptMessages, responses, commands, redirectToHomepage]);
-
-  const redirectToHomepage = useCallback(() => {
-    // Mark as completed welcome
-    localStorage.setItem('linuxwale_welcome_completed', 'true');
-    localStorage.setItem('linuxwale_last_visit', Date.now().toString());
-
-    // Redirect to homepage
-    router.push('/');
-  }, [router]);
 
   return (
     <div className="terminal-container">

@@ -52,27 +52,15 @@ export default function Contact() {
             <h2>Community Channels</h2>
             <div className="contact-methods">
               <div className="contact-method">
-                <h3>Discord Server</h3>
-                <p>Join our active Discord community for real-time discussions, support, and networking with fellow Linux enthusiasts.</p>
-                <a href="#" className="contact-link">Join Discord</a>
-              </div>
-              
-              <div className="contact-method">
                 <h3>Telegram Group</h3>
                 <p>Connect with us on Telegram for quick updates, announcements, and community discussions.</p>
                 <a href="#" className="contact-link">Join Telegram</a>
-              </div>
-              
-              <div className="contact-method">
-                <h3>Reddit Community</h3>
-                <p>Participate in discussions, share your projects, and get help from our Reddit community.</p>
-                <a href="#" className="contact-link">Visit r/LinuxWale</a>
               </div>
             </div>
           </section>
 
           {/* Social Media */}
-          <section className="contact-section">
+          {/* <section className="contact-section">
             <h2>Social Media</h2>
             <div className="social-methods">
               <div className="social-method">
@@ -80,26 +68,26 @@ export default function Contact() {
                 <p>Follow us for the latest Linux news and updates</p>
                 <a href="#" className="contact-link">Follow on Twitter</a>
               </div>
-              
+
               <div className="social-method">
                 <h3>YouTube</h3>
                 <p>Subscribe for tutorials and community content</p>
                 <a href="#" className="contact-link">Subscribe on YouTube</a>
               </div>
-              
+
               <div className="social-method">
                 <h3>LinkedIn</h3>
                 <p>Connect with us professionally</p>
                 <a href="#" className="contact-link">Connect on LinkedIn</a>
               </div>
-              
+
               <div className="social-method">
                 <h3>GitHub</h3>
                 <p>Contribute to our open-source projects</p>
                 <a href="#" className="contact-link">Visit our GitHub</a>
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
 
         {/* FAQ Section with Collapsible Items */}
@@ -109,14 +97,14 @@ export default function Contact() {
             <div className="faq-list">
               {faqs.map((faq, index) => (
                 <div key={index} className={`faq-item ${openFAQ === index ? 'active' : ''}`}>
-                  <button 
-                    className="faq-question" 
+                  <button
+                    className="faq-question"
                     onClick={() => toggleFAQ(index)}
                   >
                     <span>{faq.question}</span>
                     <span className="faq-icon">{openFAQ === index ? '−' : '+'}</span>
                   </button>
-                  <div 
+                  <div
                     className="faq-answer"
                     style={{
                       maxHeight: openFAQ === index ? '200px' : '0',
