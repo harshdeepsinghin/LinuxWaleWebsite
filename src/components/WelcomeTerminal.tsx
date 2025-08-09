@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
 
@@ -101,7 +101,7 @@ export default function WelcomeTerminal() {
       document.body.style.height = '';
       document.removeEventListener('keydown', handleGlobalKeydown);
     };
-  }, [input]); // Add input as dependency
+  }, [input, processCommand]); // Add input and processCommand as dependencies
 
   // Auto-scroll whenever output changes
   useEffect(() => {
@@ -117,7 +117,7 @@ export default function WelcomeTerminal() {
     }
   };
 
-  const processCommand = () => {
+  const processCommand = useCallback(() => {
     const expectedCommand = commands[currentStep as keyof typeof commands];
     const currentInput = input.trim();
 
@@ -158,7 +158,7 @@ export default function WelcomeTerminal() {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
-  };
+  }, [currentStep, input, output, promptMessages, responses, commands]);
 
   const redirectToHomepage = () => {
     // Mark as completed welcome
@@ -173,6 +173,7 @@ export default function WelcomeTerminal() {
     <div className="terminal-container">
       {/* Logo */}
       <div className="welcome-logo">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/LW_W_on_B.webp"
           alt="LinuxWale Logo"
@@ -180,7 +181,7 @@ export default function WelcomeTerminal() {
           style={{
             width: '80px',
             height: '80px',
-
+            boxShadow: '0 0 15px rgba(0, 255, 0, 0.4)'
           }}
         />
       </div>
@@ -230,7 +231,7 @@ export default function WelcomeTerminal() {
         onClick={redirectToHomepage}
         title="Skip the terminal experience"
       >
-        <span className="skip-text">I'm too lazy for Linux commands!</span>
+        <span className="skip-text">I&apos;m too lazy for Linux commands!</span>
         <span className="skip-subtext">Just take me to the site →</span>
       </button>
     </div>

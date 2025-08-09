@@ -7,12 +7,12 @@ export default function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
 
-  // Don't render on welcome page
-  if (pathname === '/welcome') {
-    return null;
-  }
-
   useEffect(() => {
+    // Don't add listeners on welcome page
+    if (pathname === '/welcome') {
+      return;
+    }
+
     const updateScrollProgress = () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -24,7 +24,12 @@ export default function ScrollProgress() {
     updateScrollProgress(); // Initial call
 
     return () => window.removeEventListener('scroll', updateScrollProgress);
-  }, []);
+  }, [pathname]);
+
+  // Don't render on welcome page
+  if (pathname === '/welcome') {
+    return null;
+  }
 
   return (
     <div 

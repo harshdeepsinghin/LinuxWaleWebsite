@@ -253,7 +253,7 @@ a:hover {
     transparent 100%
   );
   box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
-  margin: 0;
+  margin: 3rem 0 0 0;
   position: relative;
 }
 
@@ -1143,7 +1143,6 @@ a:hover {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 12px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 255, 0, 0.2);
     margin: 1rem;
     animation: fadeInUp 0.6s ease-out;
   }
@@ -1234,6 +1233,7 @@ a:hover {
   .hero-separator {
     height: 1px !important;
     box-shadow: 0 0 4px rgba(0, 255, 0, 0.4) !important;
+    margin: 2rem 0 0 0 !important;
   }
 
   .hero-separator::before {
