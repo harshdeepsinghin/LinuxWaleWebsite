@@ -44,6 +44,9 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Green Line Separator */}
+      <div className="hero-separator"></div>
+
       {/* Main Contact Content - Simple Structure */}
       <main className="contact-main">
         <div className="contact-simple-container">
@@ -56,6 +59,12 @@ export default function Contact() {
                 <p>Connect with us on Telegram for quick updates, announcements, and community discussions.</p>
                 <a href="https://t.me/linuxwale" className="contact-link">Join Telegram</a>
               </div>
+              <div className="contact-method">
+                <h3>Email Us</h3>
+                <p>Got a question? Drop us an email anytime.</p>
+                <a href="mailto:help@linuxwale.in" className="contact-link">Send a mail</a>
+              </div>
+
             </div>
           </section>
 
@@ -91,7 +100,7 @@ export default function Contact() {
         </div>
 
         {/* FAQ Section with Collapsible Items */}
-        <section className="faq-section">
+        {/* <section className="faq-section">
           <div className="faq-container">
             <h2>Frequently Asked Questions</h2>
             <div className="faq-list">
@@ -116,7 +125,7 @@ export default function Contact() {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );

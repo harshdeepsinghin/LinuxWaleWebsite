@@ -2499,16 +2499,16 @@ body:has(.welcome-page-container) {
     right: -5px;
     padding: 0.8rem;
   }
-  
+
   .contact-icon {
     width: 42px;
     height: 42px;
   }
-  
+
   .popup-content {
     gap: 0.6rem;
   }
-}/* Expa
+} /* Expa
 ndable Content Styles */
 .expandable-content {
   position: relative;
@@ -2581,16 +2581,16 @@ ndable Content Styles */
     padding: 0.8rem;
     margin-top: 0.8rem;
   }
-  
+
   .more-content p {
     font-size: 0.9rem;
   }
-  
+
   .read-more-toggle {
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
   }
-}/* Servi
+} /* Servi
 ces Page Styles */
 .service-pricing {
   margin: 1.5rem 0;
@@ -2643,6 +2643,7 @@ ces Page Styles */
 .service-includes ul {
   list-style: none;
   margin-left: 0;
+  text-align: left;
 }
 
 .service-includes li {
@@ -2653,6 +2654,7 @@ ces Page Styles */
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
+  text-align: left;
 }
 
 .service-includes li::before {
@@ -2664,7 +2666,11 @@ ces Page Styles */
 }
 
 .bonus-offer {
-  background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 0, 0.1),
+    rgba(0, 255, 0, 0.05)
+  );
   border: 2px solid var(--accent-green);
   border-radius: 12px;
   padding: 1.5rem;
@@ -2700,7 +2706,8 @@ ces Page Styles */
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     text-shadow: var(--glow-green);
   }
@@ -2716,37 +2723,41 @@ ces Page Styles */
     padding: 0.8rem;
     margin: 1rem 0;
   }
-  
+
   .price-value {
     font-size: 1.2rem;
   }
-  
+
   .student-offer {
     font-size: 0.8rem;
   }
-  
+
   .service-includes li {
     font-size: 0.9rem;
     padding-left: 1.2rem;
   }
-  
+
   .bonus-offer {
     padding: 1rem;
   }
-  
+
   .free-price {
     font-size: 1rem;
   }
-  
+
   .free-price strong {
     font-size: 1.2rem;
   }
-}/* 
+} /* 
 Educational Message Styles */
 .educational-message {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(0, 255, 0, 0.08), rgba(0, 255, 0, 0.03));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 0, 0.08),
+    rgba(0, 255, 0, 0.03)
+  );
   border: 1px solid rgba(0, 255, 0, 0.3);
   border-radius: 10px;
   text-align: left;
@@ -2784,6 +2795,7 @@ Educational Message Styles */
   list-style: none;
   margin: 1rem 0;
   padding-left: 0;
+  text-align: left;
 }
 
 .additional-support ul li {
@@ -2794,6 +2806,7 @@ Educational Message Styles */
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
+  text-align: left;
 }
 
 .additional-support ul li::before {
@@ -2819,21 +2832,79 @@ Educational Message Styles */
     padding: 1rem;
     margin-top: 1rem;
   }
-  
+
   .educational-message p:first-child {
     font-size: 1rem;
   }
-  
+
   .educational-message p:last-child {
     font-size: 0.85rem;
   }
-  
+
   .additional-support h4 {
     font-size: 1rem;
   }
-  
+
   .additional-support ul li {
     font-size: 0.9rem;
     padding-left: 1.2rem;
+  }
+}
+/* Android Services Page - Reduced Padding */
+@media (max-width: 768px) {
+  /* Services page specific padding reduction */
+  .services-page .section-container {
+    padding: 1.5rem 1rem !important;
+    margin: 0.5rem !important;
+  }
+  
+  .services-page .service-pricing {
+    padding: 0.8rem 0.5rem !important;
+    margin: 1rem 0 !important;
+  }
+  
+  .services-page .service-includes {
+    margin-top: 1rem !important;
+  }
+  
+  .services-page .bonus-offer {
+    padding: 1rem 0.8rem !important;
+  }
+  
+  .services-page .educational-message {
+    padding: 1rem 0.8rem !important;
+    margin-top: 1rem !important;
+  }
+  
+  .services-page .additional-support {
+    padding: 1rem 0.8rem !important;
+  }
+  
+  .services-page .content-section {
+    padding: 3rem 0.5rem !important;
+  }
+}
+
+/* Homepage Content Justified on Android */
+@media (max-width: 768px) {
+  /* Homepage content justification */
+  .main-sections .section-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+  
+  .main-sections .section-content {
+    text-align: justify !important;
+  }
+  
+  /* Expandable content also justified */
+  .expandable-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+  
+  .more-content p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
   }
 }

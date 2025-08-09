@@ -19,6 +19,9 @@ export default function About() {
         </div>
       </section>
 
+      {/* Green Line Separator */}
+      <div className="hero-separator"></div>
+
       {/* Main Content Sections */}
       <main className="main-sections">
         {/* Section 1: Our Mission */}
@@ -80,16 +83,14 @@ export default function About() {
               <ul
                 style={{
                   color: 'var(--text-muted)',
-                  marginLeft: '2rem',
                   lineHeight: 1.8,
                 }}
               >
-                <li>Provide educational resources for Linux beginners</li>
-                <li>Support experienced users with advanced tutorials</li>
-                <li>Foster community discussions and knowledge sharing</li>
-                <li>Advocate for digital privacy and security</li>
-                <li>Promote FOSS adoption in various sectors</li>
-                <li>Organize workshops and community events</li>
+                <li>- Provide educational resources for Linux beginners</li>
+                <li>- Foster community discussions and knowledge sharing</li>
+                <li>- Advocate for digital privacy and security</li>
+                <li>- Promote FOSS adoption in various sectors</li>
+                <li>- Organize workshops and community events</li>
               </ul>
             </div>
             <div className="section-title">

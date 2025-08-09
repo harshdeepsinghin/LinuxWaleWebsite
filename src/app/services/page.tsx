@@ -21,7 +21,7 @@ export default function Services() {
       <div className="hero-separator"></div>
 
       {/* Main Content Sections */}
-      <main className="main-sections">
+      <main className="main-sections services-page">
         {/* Service 1: Linux Installation */}
         <section className="content-section left-title">
           <div className="section-container">
