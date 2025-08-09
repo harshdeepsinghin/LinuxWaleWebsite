@@ -1,19 +1,33 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { ReactElement } from 'react';
+import {
+  ReactElement,
+  ReactNode,
+  isValidElement
+} from 'react';
 
-export default function ConditionalLayout({
-  children,
-}: {
+interface LayoutProps {
   children: ReactElement;
-}) {
+}
+
+export default function ConditionalLayout({ children }: LayoutProps) {
   const pathname = usePathname();
 
-  // On welcome page, only show the page content (children[1])
   if (pathname === '/welcome') {
-    const childrenArray = (children.props as { children: React.ReactNode[] }).children;
-    return childrenArray[1]; // Return only the {children} part, skip Navbar and Footer
+    if (isValidElement(children)) {
+      // Explicitly type the props so TS knows `children` exists
+      const innerChildren = (children.props as { children?: ReactNode | ReactNode[] })
+        ?.children;
+
+      if (Array.isArray(innerChildren)) {
+        return <>{innerChildren[1] ?? null}</>;
+      }
+
+      return <>{innerChildren ?? null}</>;
+    }
+
+    return null;
   }
 
   return children;
