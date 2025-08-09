@@ -158,16 +158,16 @@ export default function WelcomeTerminal() {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
-  }, [currentStep, input, output, promptMessages, responses, commands]);
+  }, [currentStep, input, output, promptMessages, responses, commands, redirectToHomepage]);
 
-  const redirectToHomepage = () => {
+  const redirectToHomepage = useCallback(() => {
     // Mark as completed welcome
     localStorage.setItem('linuxwale_welcome_completed', 'true');
     localStorage.setItem('linuxwale_last_visit', Date.now().toString());
 
     // Redirect to homepage
     router.push('/');
-  };
+  }, [router]);
 
   return (
     <div className="terminal-container">

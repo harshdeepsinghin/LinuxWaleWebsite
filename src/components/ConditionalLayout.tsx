@@ -12,7 +12,7 @@ export default function ConditionalLayout({
 
   // On welcome page, only show the page content (children[1])
   if (pathname === '/welcome') {
-    const childrenArray = (children.props as any).children;
+    const childrenArray = (children.props as { children: React.ReactNode[] }).children;
     return childrenArray[1]; // Return only the {children} part, skip Navbar and Footer
   }
 
