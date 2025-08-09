@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'LinuxWale - Services',
-  description: 'Empowering you with Linux and FOSS solutions. Explore our education, support, and consulting services.',
+  description: 'Linux installation, dual boot setup, and tech support services. Why windows, when we have doors?',
 };
 
 export default function Services() {
@@ -12,123 +12,118 @@ export default function Services() {
       {/* Page Header */}
       <section className="page-header">
         <div className="page-header-content">
-          <h1 className="page-title">Our Services</h1>
-          <p className="page-subtitle">Empowering you with Linux and FOSS solutions 🚀</p>
+          <h1 className="page-title">LinuxWale</h1>
+          <p className="page-subtitle">Why windows, when we have doors?</p>
         </div>
       </section>
 
+      {/* Green Line Separator */}
+      <div className="hero-separator"></div>
+
       {/* Main Content Sections */}
       <main className="main-sections">
-        {/* Section 1: Education & Training */}
+        {/* Service 1: Linux Installation */}
         <section className="content-section left-title">
           <div className="section-container">
             <div className="section-title">
-              <h2>Education & Training</h2>
+              <h2>🐧 Linux Installation</h2>
             </div>
             <div className="section-content">
-              <p>Comprehensive Linux training programs for beginners to advanced users. Learn everything from basic command line operations to system administration and server management.</p>
-              <ul style={{ color: 'var(--text-muted)', marginLeft: '2rem', lineHeight: 1.8 }}>
-                <li>Linux Fundamentals</li>
-                <li>Command Line Mastery</li>
-                <li>System Administration</li>
-                <li>Shell Scripting</li>
-                <li>Server Management</li>
-              </ul>
+              <p>Install your favorite Linux distro — Ubuntu, Arch, Debian & more.</p>
+
+              <div className="service-pricing">
+                <div className="price-section">
+                  <span className="price-label">💰 Price:</span>
+                  <span className="price-value">₹500</span>
+                  <span className="student-offer">🎓 Student Offer: ₹350</span>
+                </div>
+              </div>
+
+              <div className="service-includes">
+                <h4>🛠️ What's Included:</h4>
+                <ul>
+                  <li>Full Linux OS installation</li>
+                  <li>Partition setup</li>
+                  <li>Driver support (Wi-Fi, audio, graphics)</li>
+                  <li>🔧 1 Week Free Support for installation-related issues</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Section 2: Technical Support */}
+        {/* Service 2: Dual Boot Setup */}
         <section className="content-section right-title">
           <div className="section-container">
             <div className="section-content">
-              <p>Get help with your Linux-related challenges. Our community experts are ready to assist you with troubleshooting, configuration, and optimization.</p>
-              <ul style={{ color: 'var(--text-muted)', marginLeft: '2rem', lineHeight: 1.8 }}>
-                <li>Installation Support</li>
-                <li>Hardware Compatibility</li>
-                <li>Software Configuration</li>
-                <li>Performance Optimization</li>
-                <li>Security Hardening</li>
-              </ul>
+              <p>Enjoy the flexibility of running both Linux and Windows on the same machine.</p>
+
+              <div className="service-pricing">
+                <div className="price-section">
+                  <span className="price-label">💰 Price:</span>
+                  <span className="price-value">₹700</span>
+                  <span className="student-offer">🎓 Student Offer: ₹500</span>
+                </div>
+              </div>
+
+              <div className="service-includes">
+                <h4>🛠️ What's Included:</h4>
+                <ul>
+                  <li>Safe disk partitioning</li>
+                  <li>GRUB / bootloader configuration</li>
+                  <li>Driver compatibility check</li>
+                  <li>Windows-Linux conflict prevention</li>
+                  <li>🔧 1 Week Free Support for dual boot-related issues</li>
+                </ul>
+              </div>
             </div>
             <div className="section-title">
-              <h2>Technical Support</h2>
+              <h2>💻 Dual Boot Setup<br />(Linux + Windows)</h2>
             </div>
           </div>
         </section>
 
-        {/* Section 3: Community Forums */}
+        {/* Bonus Section */}
         <section className="content-section left-title">
           <div className="section-container">
             <div className="section-title">
-              <h2>Community Forums</h2>
+              <h2>BONUS POINT</h2>
             </div>
             <div className="section-content">
-              <p>Join our active community discussions, share knowledge, ask questions, and connect with fellow Linux enthusiasts from around the world.</p>
-              <ul style={{ color: 'var(--text-muted)', marginLeft: '2rem', lineHeight: 1.8 }}>
-                <li>Q&A Forums</li>
-                <li>Distribution Reviews</li>
-                <li>Hardware Recommendations</li>
-                <li>Project Showcases</li>
-                <li>News & Updates</li>
-              </ul>
+              <div className="bonus-offer">
+                <p className="free-price">🆓 Price: <strong>FREE</strong></p>
+                <p>If you'd like to do it yourself, we'll guide you step-by-step!</p>
+
+                <div className="educational-message">
+                  <p>🎯 <strong>Our main aim is to educate people!</strong></p>
+                  <p>We believe in empowering you with knowledge rather than just providing services. Stay curious, ask questions, and learn the 'why' behind every step. The best way to truly understand Linux is to get your hands dirty and explore it yourself.</p>
+                  <p>💡 <em>Remember: Every expert was once a beginner who never gave up learning!</em></p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Section 4: Resources & Guides */}
+        {/* Additional Services Section */}
         <section className="content-section right-title">
           <div className="section-container">
             <div className="section-content">
-              <p>Access our extensive library of tutorials, guides, and documentation to enhance your Linux knowledge and skills.</p>
-              <ul style={{ color: 'var(--text-muted)', marginLeft: '2rem', lineHeight: 1.8 }}>
-                <li>Step-by-step Tutorials</li>
-                <li>Configuration Guides</li>
-                <li>Best Practices</li>
-                <li>Troubleshooting Docs</li>
-                <li>Video Tutorials</li>
-              </ul>
+              <div className="additional-support">
+                <h4>🚀 Beyond Installation Services</h4>
+                <p>Got any other Linux query or tech-related question? We're up for challenges! If we don't know something, we'll solve it together by learning and exploring.</p>
+                <p>Whether it's:</p>
+                <ul>
+                  <li>🔧 System troubleshooting</li>
+                  <li>⚙️ Software configuration</li>
+                  <li>🛡️ Security hardening</li>
+                  <li>📚 Learning new technologies</li>
+                  <li>🤝 Community collaboration</li>
+                </ul>
+                <p><strong>We learn, we grow, we solve together!</strong></p>
+              </div>
             </div>
             <div className="section-title">
-              <h2>Resources & Guides</h2>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5: Privacy & Security */}
-        <section className="content-section left-title">
-          <div className="section-container">
-            <div className="section-title">
-              <h2>Privacy & Security</h2>
-            </div>
-            <div className="section-content">
-              <p>Learn about digital privacy, security best practices, and how to protect yourself in the digital world using Linux and FOSS tools.</p>
-              <ul style={{ color: 'var(--text-muted)', marginLeft: '2rem', lineHeight: 1.8 }}>
-                <li>Privacy Tools Setup</li>
-                <li>Encryption Guides</li>
-                <li>Secure Communication</li>
-                <li>Anonymous Browsing</li>
-                <li>Data Protection</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 6: Consulting */}
-        <section className="content-section right-title">
-          <div className="section-container">
-            <div className="section-content">
-              <p>Professional consulting services for businesses and organizations looking to migrate to Linux or implement FOSS solutions.</p>
-              <ul style={{ color: 'var(--text-muted)', marginLeft: '2rem', lineHeight: 1.8 }}>
-                <li>Migration Planning</li>
-                <li>Infrastructure Design</li>
-                <li>Cost Analysis</li>
-                <li>Training Programs</li>
-                <li>Ongoing Support</li>
-              </ul>
-            </div>
-            <div className="section-title">
-              <h2>Consulting</h2>
+              <h2>Tech Support & Learning</h2>
             </div>
           </div>
         </section>
@@ -136,16 +131,11 @@ export default function Services() {
         {/* Call-to-Action Section */}
         <section className="cta-section">
           <div className="cta-container">
-            <h2>Ready to Get Started?</h2>
-            <p>Join thousands of Linux enthusiasts who have already discovered the power of open-source computing. Whether you&apos;re a complete beginner or an experienced user, we have something for everyone.</p>
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
-              <Link href="/contact">
-                <button className="cta-button">Get Support</button>
-              </Link>
-              <Link href="/contact">
-                <button className="cta-button">Join Community</button>
-              </Link>
-            </div>
+            <h2>Ready to Switch to Linux?</h2>
+            <p>Join the Linux revolution and experience true computing freedom. Contact us to get started with your Linux journey!</p>
+            <Link href="/contact">
+              <button className="cta-button">Get Started</button>
+            </Link>
           </div>
         </section>
       </main>

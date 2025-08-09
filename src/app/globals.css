@@ -2590,4 +2590,250 @@ ndable Content Styles */
     padding: 0.4rem 0.8rem;
     font-size: 0.8rem;
   }
+}/* Servi
+ces Page Styles */
+.service-pricing {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(0, 255, 0, 0.05);
+  border-left: 4px solid var(--accent-green);
+  border-radius: 0 8px 8px 0;
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.price-label {
+  font-family: "Fira Code", monospace;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.price-value {
+  font-family: "Press Start 2P", "Fira Code";
+  color: var(--accent-green);
+  font-size: 1.5rem;
+  text-shadow: var(--glow-green);
+  margin-left: 0.5rem;
+}
+
+.student-offer {
+  font-family: "Fira Code", monospace;
+  color: #ffbd2e;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.service-includes {
+  margin-top: 1.5rem;
+}
+
+.service-includes h4 {
+  font-family: "Fira Code", monospace;
+  color: var(--accent-green);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-shadow: var(--glow-green);
+}
+
+.service-includes ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.service-includes li {
+  color: var(--text-muted);
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-includes li::before {
+  content: "▶";
+  color: var(--accent-green);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.bonus-offer {
+  background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 255, 0, 0.05));
+  border: 2px solid var(--accent-green);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.free-price {
+  font-family: "Press Start 2P", "Fira Code";
+  font-size: 1.2rem;
+  color: var(--accent-green);
+  text-shadow: var(--glow-green);
+  margin-bottom: 1rem;
+}
+
+.free-price strong {
+  font-size: 1.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.additional-support {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  font-style: italic;
+}
+
+.additional-support p {
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: var(--glow-green);
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: var(--glow-green-strong);
+  }
+}
+
+/* Mobile services styles */
+@media (max-width: 768px) {
+  .service-pricing {
+    padding: 0.8rem;
+    margin: 1rem 0;
+  }
+  
+  .price-value {
+    font-size: 1.2rem;
+  }
+  
+  .student-offer {
+    font-size: 0.8rem;
+  }
+  
+  .service-includes li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+  }
+  
+  .bonus-offer {
+    padding: 1rem;
+  }
+  
+  .free-price {
+    font-size: 1rem;
+  }
+  
+  .free-price strong {
+    font-size: 1.2rem;
+  }
+}/* 
+Educational Message Styles */
+.educational-message {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(0, 255, 0, 0.08), rgba(0, 255, 0, 0.03));
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.educational-message p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.educational-message p:first-child {
+  color: var(--accent-green);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: var(--glow-green);
+}
+
+.educational-message p:last-child {
+  margin-bottom: 0;
+  color: #ffbd2e;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.additional-support h4 {
+  font-family: "Fira Code", monospace;
+  color: var(--accent-green);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: var(--glow-green);
+}
+
+.additional-support ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding-left: 0;
+}
+
+.additional-support ul li {
+  color: var(--text-muted);
+  font-family: "Fira Code", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.additional-support ul li::before {
+  content: "▶";
+  color: var(--accent-green);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.additional-support p:last-child {
+  color: var(--accent-green);
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  text-shadow: var(--glow-green);
+}
+
+/* Mobile educational message styles */
+@media (max-width: 768px) {
+  .educational-message {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .educational-message p:first-child {
+    font-size: 1rem;
+  }
+  
+  .educational-message p:last-child {
+    font-size: 0.85rem;
+  }
+  
+  .additional-support h4 {
+    font-size: 1rem;
+  }
+  
+  .additional-support ul li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+  }
 }
