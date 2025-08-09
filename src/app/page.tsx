@@ -28,11 +28,7 @@ export default function Home() {
             </div>
             <div className="section-content">
               <p>
-                Linux operating system is a free and open-source Unix-like
-                operating system. The Linux kernel, on the other hand, is the core
-                part of the Linux operating system responsible for managing
-                hardware resources and providing essential services that serves as
-                the foundation for various operating systems.
+                Linux may refer to two things: the Linux operating system, which is a free and open-source Unix-like system, and the Linux kernel, which is the core component responsible for managing hardware resources and providing essential services. The kernel serves as the foundation upon which various operating systems are built, enabling them to function efficiently and interact with the underlying hardware.
               </p>
             </div>
           </div>

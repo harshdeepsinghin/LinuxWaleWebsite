@@ -54,7 +54,7 @@ export default function Contact() {
               <div className="contact-method">
                 <h3>Telegram Group</h3>
                 <p>Connect with us on Telegram for quick updates, announcements, and community discussions.</p>
-                <a href="#" className="contact-link">Join Telegram</a>
+                <a href="https://t.me/linuxwale" className="contact-link">Join Telegram</a>
               </div>
             </div>
           </section>

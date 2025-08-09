@@ -6,6 +6,7 @@ import WelcomeRedirect from "@/components/WelcomeRedirect";
 import ClientScripts from "@/components/ClientScripts";
 import ConditionalLayout from "@/components/ConditionalLayout";
 import ScrollProgress from "@/components/ScrollProgress";
+import AnimatedPenguin from "@/components/AnimatedPenguin";
 
 export const metadata: Metadata = {
   title: "LinuxWale - Home",
@@ -36,6 +37,7 @@ export default function RootLayout({
       </head>
       <body>
         <ScrollProgress />
+        <AnimatedPenguin />
         <WelcomeRedirect />
         <ConditionalLayout>
           <>
