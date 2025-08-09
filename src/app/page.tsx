@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import AnimatedTitle from '@/components/AnimatedTitle';
+import ExpandableContent from '@/components/ExpandableContent';
 
 export default function Home() {
   return (
@@ -27,9 +28,13 @@ export default function Home() {
               <h2>What is Linux?</h2>
             </div>
             <div className="section-content">
-              <p>
-                Linux may refer to two things: the Linux operating system, which is a free and open-source Unix-like system, and the Linux kernel, which is the core component responsible for managing hardware resources and providing essential services. The kernel serves as the foundation upon which various operating systems are built, enabling them to function efficiently and interact with the underlying hardware.
-              </p>
+              <ExpandableContent
+                moreContent="Linux is like a restaurant — the kernel is the kitchen where the cooking happens, and the operating system is the dining area where customers order, eat, and enjoy. The kitchen does the heavy work; the dining area makes it usable for people."
+              >
+                <p>
+                  Linux may refer to two things: the Linux operating system, which is a free and open-source Unix-like system, and the Linux kernel, which is the core component responsible for managing hardware resources and providing essential services. The kernel serves as the foundation upon which various operating systems are built, enabling them to function efficiently and interact with the underlying hardware.
+                </p>
+              </ExpandableContent>
             </div>
           </div>
         </section>
@@ -38,15 +43,19 @@ export default function Home() {
         <section className="content-section right-title">
           <div className="section-container">
             <div className="section-content">
-              <p>
-                Linux offers unparalleled freedom, security, and customization.
-                It&apos;s free from corporate control, highly secure by design, and
-                gives you complete control over your computing experience. With
-                thousands of distributions to choose from, Linux adapts to your
-                needs rather than forcing you to adapt to it. Plus, it&apos;s the
-                backbone of the internet, powering servers, supercomputers, and
-                embedded systems worldwide.
-              </p>
+              <ExpandableContent
+                moreContent="Linux is like owning your own house instead of renting — you can paint the walls any color, lock the doors as securely as you want, and arrange everything to fit your lifestyle. It’s yours to control, safe from landlords (corporate control). Do whatever you want to do with it."
+              >
+                <p>
+                  Linux offers unparalleled freedom, security, and customization.
+                  It&apos;s free from corporate control, highly secure by design, and
+                  gives you complete control over your computing experience. With
+                  thousands of distributions to choose from, Linux adapts to your
+                  needs rather than forcing you to adapt to it. Plus, it&apos;s the
+                  backbone of the internet, powering servers, supercomputers, and
+                  embedded systems worldwide.
+                </p>
+              </ExpandableContent>
             </div>
             <div className="section-title">
               <h2>Why Linux?</h2>
@@ -61,14 +70,18 @@ export default function Home() {
               <h2>What is LinuxWale?</h2>
             </div>
             <div className="section-content">
-              <p>
-                LinuxWale is a community passionately dedicated to promoting Open
-                Source Softwares like Linux. Whether you&apos;re a beginner seeking
-                education alongside peers or an experienced who is ready to share
-                his/her experience by helping others and contributing to the
-                community, LinuxWale is your go-to space for embracing the power
-                of FOSS and Linux.
-              </p>
+              <ExpandableContent
+                moreContent="LinuxWale is like a friendly neighborhood where Linux enthusiasts hang out! Think of it as a WhatsApp group, but way cooler - where beginners can ask 'stupid' questions without being judged, and experts love helping out. We're basically Linux nerds who believe everyone should experience the joy of a computer that actually works for YOU, not against you!"
+              >
+                <p>
+                  LinuxWale is a community passionately dedicated to promoting Open
+                  Source Softwares like Linux. Whether you&apos;re a beginner seeking
+                  education alongside peers or an experienced who is ready to share
+                  his/her experience by helping others and contributing to the
+                  community, LinuxWale is your go-to space for embracing the power
+                  of FOSS and Linux.
+                </p>
+              </ExpandableContent>
             </div>
           </div>
         </section>
@@ -77,24 +90,13 @@ export default function Home() {
         <section className="content-section right-title">
           <div className="section-container">
             <div className="section-content">
-              <p>
-                We are a Linux Community that supports and encourages Linux, Open
-                Source Projects as well as Any Kind Tech that adds value to our
-                people. We try to help our people in any kind of problems related
-                to tech (especially Linux).
-              </p>
-              <p>
-                Welcome to LinuxWale – where the magic of Linux unfolds! Immerse
-                yourself in the captivating world of the most exquisite operating
-                system of all time – LINUX. As a passionate community, we not only
-                embrace the beauty of Linux but also champion Open Source Projects
-                and any transformative tech that elevates our community. At
-                LinuxWale, we&apos;re not just enthusiasts; we&apos;re a vibrant hub
-                dedicated to supporting and empowering individuals facing any tech
-                challenge, with a special focus on the mesmerizing realm of Linux.
-                Join us, and let&apos;s navigate the limitless possibilities of tech
-                together!
-              </p>
+              <ExpandableContent
+                moreContent="Dude, this is as simple as it gets."
+              >
+                <p>
+                  Because we’re more than just a Linux group — we’re a community that supports Linux, open source, and any tech that makes life better. Whether it’s solving Linux quirks, exploring new tools, or sharing knowledge, we’re here to help you grow, learn, and thrive in the world of tech.
+                </p>
+              </ExpandableContent>
             </div>
             <div className="section-title">
               <h2>Why LinuxWale?</h2>
