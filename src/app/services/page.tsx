@@ -29,7 +29,7 @@ export default function Services() {
               <h2>🐧 Linux Installation</h2>
             </div>
             <div className="section-content">
-              <p>Install your favorite Linux distro — Ubuntu, Arch, Debian & more.</p>
+              <p>Install your favorite Linux distro — Ubuntu, Arch, Debian &amp; more.</p>
 
               <div className="service-pricing">
                 <div className="price-section">
@@ -40,7 +40,7 @@ export default function Services() {
               </div>
 
               <div className="service-includes">
-                <h4>🛠️ What's Included:</h4>
+                <h4>🛠️ What&apos;s Included:</h4>
                 <ul>
                   <li>Full Linux OS installation</li>
                   <li>Partition setup</li>
@@ -67,7 +67,7 @@ export default function Services() {
               </div>
 
               <div className="service-includes">
-                <h4>🛠️ What's Included:</h4>
+                <h4>🛠️ What&apos;s Included:</h4>
                 <ul>
                   <li>Safe disk partitioning</li>
                   <li>GRUB / bootloader configuration</li>
@@ -92,11 +92,11 @@ export default function Services() {
             <div className="section-content">
               <div className="bonus-offer">
                 <p className="free-price">🆓 Price: <strong>FREE</strong></p>
-                <p>If you'd like to do it yourself, we'll guide you step-by-step!</p>
+                <p>If you&apos;d like to do it yourself, we&apos;ll guide you step-by-step!</p>
 
                 <div className="educational-message">
                   <p>🎯 <strong>Our main aim is to educate people!</strong></p>
-                  <p>We believe in empowering you with knowledge rather than just providing services. Stay curious, ask questions, and learn the 'why' behind every step. The best way to truly understand Linux is to get your hands dirty and explore it yourself.</p>
+                  <p>We believe in empowering you with knowledge rather than just providing services. Stay curious, ask questions, and learn the &apos;why&apos; behind every step. The best way to truly understand Linux is to get your hands dirty and explore it yourself.</p>
                   <p>💡 <em>Remember: Every expert was once a beginner who never gave up learning!</em></p>
                 </div>
               </div>
@@ -110,8 +110,8 @@ export default function Services() {
             <div className="section-content">
               <div className="additional-support">
                 <h4>🚀 Beyond Installation Services</h4>
-                <p>Got any other Linux query or tech-related question? We're up for challenges! If we don't know something, we'll solve it together by learning and exploring.</p>
-                <p>Whether it's:</p>
+                <p>Got any other Linux query or tech-related question? We&apos;re up for challenges! If we don&apos;t know something, we&apos;ll solve it together by learning and exploring.</p>
+                <p>Whether it&apos;s:</p>
                 <ul>
                   <li>🔧 System troubleshooting</li>
                   <li>⚙️ Software configuration</li>
@@ -123,7 +123,7 @@ export default function Services() {
               </div>
             </div>
             <div className="section-title">
-              <h2>Tech Support & Learning</h2>
+              <h2>Tech Support &amp; Learning</h2>
             </div>
           </div>
         </section>
