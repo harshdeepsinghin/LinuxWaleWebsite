@@ -2379,3 +2379,133 @@ body:has(.welcome-page-container) {
     right: 6px !important;
   }
 }
+/* Clickable penguin styles */
+.clickable-penguin {
+  pointer-events: auto !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clickable-penguin:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.clickable-penguin:active {
+  transform: scale(0.95);
+}
+
+/* Mobile clickable penguin */
+@media (max-width: 768px) {
+  .clickable-penguin:hover {
+    transform: scale(1.05);
+  }
+
+  .clickable-penguin:active {
+    transform: scale(0.9);
+  }
+}
+/* Penguin Contact Popup */
+.penguin-popup {
+  position: absolute;
+  bottom: 90px;
+  right: -10px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--accent-green);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  animation: popupSlideIn 0.3s ease-out;
+  z-index: 1001;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 2px solid transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.telegram-icon {
+  background: linear-gradient(135deg, #0088cc, #0066aa);
+  color: white;
+}
+
+.telegram-icon:hover {
+  background: linear-gradient(135deg, #0099dd, #0077bb);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(0, 136, 204, 0.5);
+  transform: scale(1.1);
+}
+
+.email-icon {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  color: white;
+}
+
+.email-icon:hover {
+  background: linear-gradient(135deg, #ff7c7c, #ff6363);
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(255, 107, 107, 0.5);
+  transform: scale(1.1);
+}
+
+/* Popup animations */
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popupSlideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(40px) scale(0.3);
+  }
+}
+
+.popup-closing {
+  animation: popupSlideOut 0.3s ease-in forwards !important;
+}
+
+/* Mobile popup adjustments */
+@media (max-width: 768px) {
+  .penguin-popup {
+    bottom: 70px;
+    right: -5px;
+    padding: 0.8rem;
+  }
+  
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .popup-content {
+    gap: 0.6rem;
+  }
+}
