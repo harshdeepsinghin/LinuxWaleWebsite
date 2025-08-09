@@ -10,6 +10,11 @@ import ScrollProgress from "@/components/ScrollProgress";
 export const metadata: Metadata = {
   title: "LinuxWale - Home",
   description: "LinuxWale - Why windows, when we have doors? Join our Linux community and embrace the power of FOSS.",
+  icons: {
+    icon: 'favicon.ico',
+    shortcut: 'favicon.ico',
+    apple: 'favicon.ico',
+  },
 };
 
 export const viewport = {

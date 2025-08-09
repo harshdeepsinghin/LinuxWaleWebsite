@@ -16,14 +16,14 @@ export default function Footer() {
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </div>
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h4>Resources</h4>
           <ul>
             <li><Link href="#">Documentation</Link></li>
             <li><Link href="#">Tutorials</Link></li>
             <li><Link href="#">Support</Link></li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <div className="footer-bottom">
         <p>&copy; 2025 LinuxWale. Embracing the power of FOSS.</p>
