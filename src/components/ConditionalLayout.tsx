@@ -14,21 +14,20 @@ interface LayoutProps {
 export default function ConditionalLayout({ children }: LayoutProps) {
   const pathname = usePathname();
 
+  // For welcome page, render only the page content without navbar/footer
   if (pathname === '/welcome') {
     if (isValidElement(children)) {
-      // Explicitly type the props so TS knows `children` exists
-      const innerChildren = (children.props as { children?: ReactNode | ReactNode[] })
-        ?.children;
+      // Extract the page content from the layout structure
+      const childrenArray = (children.props as { children?: ReactNode[] }).children;
 
-      if (Array.isArray(innerChildren)) {
-        return <>{innerChildren[1] ?? null}</>;
+      if (Array.isArray(childrenArray)) {
+        // Return only the middle element (the page content), skip navbar and footer
+        return <>{childrenArray[1]}</>;
       }
-
-      return <>{innerChildren ?? null}</>;
     }
-
     return null;
   }
 
+  // For all other pages, render with navbar and footer
   return children;
 }
