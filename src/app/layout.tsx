@@ -8,6 +8,7 @@ import ConditionalLayout from "@/components/ConditionalLayout";
 import ScrollProgress from "@/components/ScrollProgress";
 import AnimatedPenguin from "@/components/AnimatedPenguin";
 import MatrixBackground from "@/components/MatrixBackground";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata: Metadata = {
   title: "LinuxWale - Home",
@@ -37,18 +38,20 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
       <body>
-        <MatrixBackground />
-        <ScrollProgress />
-        <AnimatedPenguin />
-        <WelcomeRedirect />
-        <ConditionalLayout>
-          <>
-            <Navbar />
-            {children}
-            <Footer />
-          </>
-        </ConditionalLayout>
-        <ClientScripts />
+        <ThemeProvider>
+          <MatrixBackground />
+          <ScrollProgress />
+          <AnimatedPenguin />
+          <WelcomeRedirect />
+          <ConditionalLayout>
+            <>
+              <Navbar />
+              {children}
+              <Footer />
+            </>
+          </ConditionalLayout>
+          <ClientScripts />
+        </ThemeProvider>
       </body>
     </html>
   );
