@@ -29,8 +29,10 @@ export default function WelcomeTerminal() {
 
   const redirectToHomepage = useCallback(() => {
     // Mark as completed welcome
-    localStorage.setItem('linuxwale_welcome_completed', 'true');
-    localStorage.setItem('linuxwale_last_visit', Date.now().toString());
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('linuxwale_welcome_completed', 'true');
+      localStorage.setItem('linuxwale_last_visit', Date.now().toString());
+    }
 
     // Redirect to homepage
     router.push('/');
@@ -155,7 +157,7 @@ export default function WelcomeTerminal() {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
-  }, [input, output, currentDirectory, availableDirectories, redirectToHomepage]);
+  }, [input, output, currentDirectory, availableDirectories, redirectToHomepage, router]);
 
   // Resize functionality
   const handleMouseDown = useCallback((e: React.MouseEvent, direction: string) => {
@@ -202,6 +204,9 @@ export default function WelcomeTerminal() {
   }, [windowSize]);
 
   useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined') return;
+
     // Prevent scrolling on welcome page
     document.body.style.overflow = 'hidden';
     document.body.style.position = 'fixed';
@@ -213,7 +218,7 @@ export default function WelcomeTerminal() {
       inputRef.current?.focus();
 
       // For mobile devices, try to trigger keyboard
-      if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      if (typeof navigator !== 'undefined' && /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         inputRef.current?.click();
         // Additional attempts to open keyboard
         setTimeout(() => {
