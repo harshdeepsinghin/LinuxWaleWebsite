@@ -5,21 +5,15 @@ import { ReactElement, ReactNode } from 'react';
 
 interface LayoutProps {
   children: ReactElement;
+  pageContent: ReactNode;
 }
 
-export default function ConditionalLayout({ children }: LayoutProps) {
+export default function ConditionalLayout({ children, pageContent }: LayoutProps) {
   const pathname = usePathname();
 
-  // For welcome page, don't render navbar and footer
+  // For welcome page, render only the page content without navbar/footer
   if (pathname === '/welcome') {
-    // Extract just the page content from the children structure
-    const childrenProps = children.props as { children?: ReactNode[] };
-    if (childrenProps.children && Array.isArray(childrenProps.children)) {
-      // Return only the page content (middle element), skip navbar and footer
-      return <>{childrenProps.children[1]}</>;
-    }
-    // Fallback: return null if structure is unexpected
-    return null;
+    return <>{pageContent}</>;
   }
 
   // For all other pages, render with navbar and footer

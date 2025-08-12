@@ -43,7 +43,7 @@ export default function RootLayout({
           <ScrollProgress />
           <AnimatedPenguin />
           <WelcomeRedirect />
-          <ConditionalLayout>
+          <ConditionalLayout pageContent={children}>
             <>
               <Navbar />
               {children}
