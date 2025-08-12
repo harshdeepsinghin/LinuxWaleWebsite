@@ -25,7 +25,7 @@ export default function MatrixBackground() {
 
         // Professional settings for full rain effect
         const fontSize = 16;
-        let columns = Math.floor(window.innerWidth / fontSize); // Use window width for full coverage
+        const columns = Math.floor(window.innerWidth / fontSize); // Use window width for full coverage
         const drops: number[] = [];
         const speeds: number[] = [];
         const brightness: number[] = [];
