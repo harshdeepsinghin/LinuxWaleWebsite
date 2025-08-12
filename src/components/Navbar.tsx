@@ -38,22 +38,27 @@ export default function Navbar() {
 
         <ul className={`nav-menu ${isMenuOpen ? 'mobile-open' : ''}`}>
           <li>
-            <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`} onClick={toggleMenu}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/about" className={`nav-link ${pathname === '/about/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`} onClick={toggleMenu}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/services" className={`nav-link ${pathname === '/services/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/read" className={`nav-link ${pathname === '/read' ? 'active' : ''}`} onClick={toggleMenu}>
+              Read
+            </Link>
+          </li>
+          <li>
+            <Link href="/services" className={`nav-link ${pathname === '/services' ? 'active' : ''}`} onClick={toggleMenu}>
               Services
             </Link>
           </li>
           <li>
-            <Link href="/contact" className={`nav-link ${pathname === '/contact/' ? 'active' : ''}`} onClick={() => setIsMenuOpen(false)}>
+            <Link href="/contact" className={`nav-link ${pathname === '/contact' ? 'active' : ''}`} onClick={toggleMenu}>
               Contact
             </Link>
           </li>
