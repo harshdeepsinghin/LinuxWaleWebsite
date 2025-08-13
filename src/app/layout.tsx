@@ -8,6 +8,7 @@ import ConditionalLayout from "@/components/ConditionalLayout";
 import ScrollProgress from "@/components/ScrollProgress";
 import AnimatedPenguin from "@/components/AnimatedPenguin";
 import MatrixBackground from "@/components/MatrixBackground";
+import TerminalPullup from "@/components/TerminalPullup";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <MatrixBackground />
+          <TerminalPullup />
           <ScrollProgress />
           <AnimatedPenguin />
           <WelcomeRedirect />

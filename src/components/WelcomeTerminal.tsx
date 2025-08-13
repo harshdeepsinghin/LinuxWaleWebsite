@@ -298,13 +298,14 @@ export default function WelcomeTerminal() {
       <div className="welcome-logo">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/LW_W_on_B.webp"
+          src="/images/LW_B_on_W.webp"
           alt="LinuxWale Logo"
           className="logo-image"
           style={{
             width: '80px',
             height: '80px',
-            boxShadow: '0 0 15px rgba(0, 255, 0, 0.4)'
+            boxShadow: '0 0 15px rgba(0, 255, 0, 0.4)',
+            borderRadius: 10
           }}
         />
       </div>
@@ -335,9 +336,14 @@ export default function WelcomeTerminal() {
         <div className="terminal-header">
           <div className="terminal-title">LinuxWale Terminal</div>
           <div className="terminal-controls">
-            <div className="terminal-control close"></div>
-            <div className="terminal-control minimize"></div>
-            <div className="terminal-control maximize"></div>
+            <div
+              className="terminal-control close"
+              onClick={redirectToHomepage}
+              style={{ cursor: 'pointer' }}
+              title="Close terminal and go to homepage"
+            >
+              ×
+            </div>
           </div>
         </div>
 
