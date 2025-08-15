@@ -3085,4 +3085,118 @@ ofessional Matrix Background Enhancements */
   font-weight: bold;
   color: white;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}/* Termi
+nal icon in penguin popup */
+.terminal-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--accent-green);
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--accent-green);
+}
+
+.terminal-icon:hover {
+  background-color: var(--accent-green);
+  color: var(--bg-primary);
+  box-shadow: 0 0 10px var(--accent-green);
+  transform: scale(1.1);
+}
+
+.terminal-icon .terminal-symbol {
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Light theme terminal icon */
+[data-theme="light"] .terminal-icon {
+  color: var(--neon-blue);
+  border-color: var(--neon-blue);
+}
+
+[data-theme="light"] .terminal-icon:hover {
+  background-color: var(--neon-blue);
+  color: white;
+  box-shadow: 0 0 10px var(--neon-blue);
+}/* Beau
+tiful Terminal Icon in Penguin Popup */
+.terminal-icon {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+  border: 2px solid var(--accent-green);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--accent-green);
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 255, 0, 0.2);
+}
+
+.terminal-icon:hover {
+  background: linear-gradient(135deg, var(--accent-green), #00cc00);
+  color: var(--bg-primary);
+  box-shadow: 0 0 15px var(--accent-green), 0 4px 12px rgba(0, 255, 0, 0.3);
+  transform: scale(1.15);
+}
+
+.terminal-symbol {
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-top: -1px; /* Fine-tune vertical centering */
+}
+
+/* Light theme terminal icon */
+[data-theme="light"] .terminal-icon {
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+  border-color: var(--neon-blue);
+  color: var(--neon-blue);
+  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+}
+
+[data-theme="light"] .terminal-icon:hover {
+  background: linear-gradient(135deg, var(--neon-blue), #00b8e6);
+  color: white;
+  box-shadow: 0 0 15px var(--neon-blue), 0 4px 12px rgba(0, 212, 255, 0.3);
+}
+
+/* Ensure terminal icon matches other contact icons */
+.contact-icon.terminal-icon {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card)) !important;
+  border: 2px solid var(--accent-green) !important;
+  color: var(--accent-green) !important;
+}
+
+.contact-icon.terminal-icon:hover {
+  background: linear-gradient(135deg, var(--accent-green), #00cc00) !important;
+  color: var(--bg-primary) !important;
+}
+
+[data-theme="light"] .contact-icon.terminal-icon {
+  border-color: var(--neon-blue) !important;
+  color: var(--neon-blue) !important;
+}
+
+[data-theme="light"] .contact-icon.terminal-icon:hover {
+  background: linear-gradient(135deg, var(--neon-blue), #00b8e6) !important;
+  color: white !important;
 }

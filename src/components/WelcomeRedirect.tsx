@@ -18,13 +18,8 @@ export default function WelcomeRedirect() {
         localStorage.setItem('linuxwale_has_visited', 'true');
         router.push('/welcome');
       }
-      // If user has visited before and is on welcome page, redirect to home
-      else if (hasVisited && pathname === '/welcome') {
-        const hasCompleted = localStorage.getItem('linuxwale_welcome_completed');
-        if (hasCompleted) {
-          router.push('/');
-        }
-      }
+      // Allow users to access welcome page even after completion
+      // Only redirect on first visit, not on subsequent manual visits
     }
   }, [router, pathname]);
 
