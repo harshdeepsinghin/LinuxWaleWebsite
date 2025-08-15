@@ -372,8 +372,7 @@ export default function WelcomeTerminal() {
               autoFocus
               inputMode="text"
               enterKeyHint="go"
-            />
-            <span className="cursor"></span>
+            />           
           </div>
         </div>
       </div>

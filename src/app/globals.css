@@ -1139,14 +1139,6 @@ a:hover {
   margin-left: 0.5rem;
 }
 
-.cursor {
-  display: inline-block;
-  width: 10px;
-  height: 1.2em;
-  background-color: var(--accent-green);
-  animation: blink 1s infinite;
-}
-
 @keyframes blink {
   0%,
   50% {
