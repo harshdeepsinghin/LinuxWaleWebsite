@@ -1,4 +1,22 @@
-'use client';
+// Converted to a server component to allow page-level metadata export.
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact LinuxWale',
+  description: 'Contact LinuxWale (Linux Wale / Linux Vale) – join our Telegram community or email us for Linux help, FOSS support & collaboration.',
+  alternates: { canonical: 'https://linuxwale.in/contact/' },
+  openGraph: {
+    title: 'Contact LinuxWale',
+    description: 'Join LinuxWale – community for Linux, FOSS & privacy. Connect via Telegram or email.',
+    url: 'https://linuxwale.in/contact/',
+    type: 'website'
+  },
+  twitter: {
+    title: 'Contact LinuxWale',
+    description: 'LinuxWale (Linux Wale) contact – community help & collaboration.'
+  }
+};
 
 // import { useState } from 'react';
 

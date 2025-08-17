@@ -2,8 +2,18 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'LinuxWale - About',
-  description: 'Discover our journey in the world of FOSS. Learn about LinuxWale\'s mission, vision, and values.',
+  title: 'About LinuxWale',
+  description: 'About LinuxWale (Linux Wale / Linux Vale): mission, vision, values & FOSS community focus in India.',
+  alternates: { canonical: 'https://linuxwale.in/about/' },
+  openGraph: {
+    title: 'About LinuxWale – Linux & FOSS Community',
+    description: 'Learn about LinuxWale (Linux Wale) mission, vision & open source advocacy.',
+    url: 'https://linuxwale.in/about/'
+  },
+  twitter: {
+    title: 'About LinuxWale',
+    description: 'Mission & vision of LinuxWale (Linux Wale / Linux Vale) community.'
+  }
 };
 
 export default function About() {

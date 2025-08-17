@@ -2,8 +2,18 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'LinuxWale - Services',
-  description: 'Linux installation, dual boot setup, and tech support services. Why windows, when we have doors?',
+  title: 'Linux & Dual Boot Services',
+  description: 'LinuxWale (Linux Wale / Linux Vale) services: Linux installation, dual boot setup, tech support & learning help. Why windows, when we have doors?',
+  alternates: { canonical: 'https://linuxwale.in/services/' },
+  openGraph: {
+    title: 'Linux Installation & Dual Boot Services – LinuxWale',
+    description: 'Professional & community-backed Linux installation, dual boot & support (Linux Wale).',
+    url: 'https://linuxwale.in/services/'
+  },
+  twitter: {
+    title: 'Linux Installation & Dual Boot – LinuxWale',
+    description: 'LinuxWale services: install Linux, set up dual boot, learn & get support.'
+  }
 };
 
 export default function Services() {
