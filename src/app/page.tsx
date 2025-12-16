@@ -125,7 +125,31 @@ export default function Home() {
         display: 'none'
       }} data-hidden-for-seo="true">
         <p>
-          Also searched as: <span lang="en">LinuxWale</span>, Linux Wale, Linux Vale, Linux Waale, Linux Vaale, Linux Wala, Linuxwala, Linux-wale, Linux wale community India, Linux vale community, लिनक्स वाले, linux wale telegram.
+          Brand variations: <span lang="en">LinuxWale, Linux Wale, Linux Wale Official, LinuxWale Official, linuxwaleofficial, linuxwale, Linux Vale, Linux Waale, Linux Vaale, Linux Wala, Linuxwala, Linux-wale, linux wale community</span>
+        </p>
+        <p>
+          Location-based: <span lang="en">Linux wale community India, Linux vale community India, Linux community India, Linux users India, Linux group India, Linux forum India, Linux help India, Linux support India, Linux tutorial India, Linux learning India</span>
+        </p>
+        <p>
+          Community keywords: <span lang="en">Linux community, open source community, FOSS community, Linux enthusiasts, Linux beginners, Linux experts, tech community, programming community, developer community, Linux meetup, Linux group, Linux forum, Linux Discord</span>
+        </p>
+        <p>
+          Technology keywords: <span lang="en">Linux operating system, Linux kernel, Unix-like system, open source software, FOSS, free software, Ubuntu, Fedora, Debian, Linux distribution, Linux distros, kernel management, system administration, Linux security, Linux privacy</span>
+        </p>
+        <p>
+          Learning keywords: <span lang="en">Linux tutorial, Linux learning, Linux education, Linux courses, Linux guide, Linux for beginners, Linux tips, Linux tricks, Linux help, Linux support, Linux questions, how to use Linux, Linux basics, Linux fundamentals, Linux introduction</span>
+        </p>
+        <p>
+          Platform keywords: <span lang="en">linux wale telegram, Linux Wale Discord, Linux Wale YouTube, Linux Wale community chat, Linux Wale forum, Linux Wale WhatsApp, Linux Wale social, Linux Wale official channel</span>
+        </p>
+        <p>
+          Hindi keywords: <span lang="hi">लिनक्स वाले, लिनक्स वेल, लिनक्स कम्युनिटी, लिनक्स समुदाय, ओपन सोर्स, फ्री सॉफ्टवेयर, लिनक्स सीखें, लिनक्स गाइड, लिनक्स ट्यूटोरियल, लिनक्स मदद</span>
+        </p>
+        <p>
+          Related searches: <span lang="en">why Linux, Linux vs Windows, Linux advantages, Linux security, Linux performance, Linux free, why use Linux, Linux community support, open source benefits, FOSS advantages, Linux ecosystem, Linux software, Linux tools</span>
+        </p>
+        <p>
+          Professional keywords: <span lang="en">Linux administration, Linux development, Linux server, Linux system, Linux DevOps, Linux cloud, Linux infrastructure, Linux deployment, Linux automation, Linux scripting, Linux shell, Linux command line</span>
         </p>
       </section>
     </>
