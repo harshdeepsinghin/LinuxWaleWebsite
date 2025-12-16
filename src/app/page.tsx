@@ -120,14 +120,10 @@ export default function Home() {
           </div>
         </section>
       </main>
-      {/* Keyword variations / common misspellings block (accessible, low-visibility) */}
-      <section aria-label="Common spellings of LinuxWale" style={{
-        fontSize: '0.75rem',
-        opacity: 0.4,
-        maxWidth: '900px',
-        margin: '4rem auto 2rem',
-        lineHeight: 1.4
-      }}>
+      {/* Keyword variations / common misspellings block (hidden for homepage display) */}
+      <section aria-label="Common spellings of LinuxWale" aria-hidden="true" style={{
+        display: 'none'
+      }} data-hidden-for-seo="true">
         <p>
           Also searched as: <span lang="en">LinuxWale</span>, Linux Wale, Linux Vale, Linux Waale, Linux Vaale, Linux Wala, Linuxwala, Linux-wale, Linux wale community India, Linux vale community, लिनक्स वाले, linux wale telegram.
         </p>
